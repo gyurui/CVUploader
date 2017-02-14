@@ -8,12 +8,15 @@
 
 import UIKit
 import Alamofire
+import SwiftSpinner
 
 class DocumentsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     var documents : [Document] = []
 
     @IBOutlet weak var tableView: UITableView!
+
+    @IBOutlet weak var deletButton: UIButton!
     
     @IBAction func pushDeletAllButton(_ sender: Any) {
         deleteProcess ()
@@ -28,6 +31,7 @@ class DocumentsViewController: UIViewController, UITableViewDelegate,UITableView
         {
             self.tableView.reloadData()
         }
+        deletButton.layer.cornerRadius = 10
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,10 +43,8 @@ class DocumentsViewController: UIViewController, UITableViewDelegate,UITableView
         
         cell.nameLabel.text = documents[indexPath.row].name
         cell.sizeLabel.text = "Size: \(documents[indexPath.row].size)"
-        cell.createlabel.text = "Created: \(documents[indexPath.row].created)"
+        cell.createLabel.text = "Created: \(documents[indexPath.row].created)"
         
-        
-        // Configure the cell...
         return cell
     }
     
@@ -71,6 +73,7 @@ class DocumentsViewController: UIViewController, UITableViewDelegate,UITableView
     
     func deleteProcess()
     {
+        SwiftSpinner.show("Törlés folyamatban ...")
         var parameters : Array? = []
     
             //repair!
@@ -93,6 +96,7 @@ class DocumentsViewController: UIViewController, UITableViewDelegate,UITableView
                 .responseJSON {
                     [weak self]
                     response in
+                    SwiftSpinner.hide()
                     if response.response?.statusCode == 200
                     {
                         self?.documents.removeAll()

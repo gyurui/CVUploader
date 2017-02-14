@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftSpinner
 
 class UploadViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -16,9 +17,12 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
     var documentsArray : [Document]? = nil
     var files : [CustomFile] = []
     
+    @IBOutlet weak var uploadSourceButton: UIButton!
     
+    @IBOutlet weak var uploadFilesButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
     
     @IBAction func pushLogoutButton(_ sender: UIButton) {
@@ -28,7 +32,8 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBAction func pushDownloadSourceCode(_ sender: UIButton) {
         sender.isEnabled = false
         let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
-        
+        SwiftSpinner.show(progress: 0, title: "Letöltés folyamatban ...")
+
         Alamofire.download(
             "https://github.com/gyurui/CVUploader/archive/master.zip",
             method: .get,
@@ -38,7 +43,8 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
             to: destination).downloadProgress(closure: { (progress) in
                 //progress closure
                 print("Download Progress2: \(progress.fractionCompleted)")
-                self.progressView.progress = Float(progress.fractionCompleted)
+                //self.progressView.progress = Float(progress.fractionCompleted)
+                SwiftSpinner.show(progress: progress.fractionCompleted, title: "Letöltés folyamatban ...")
                 
             }).response(completionHandler: {
                 [weak self]
@@ -52,15 +58,18 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
                             let sourceCode = CustomFile.init(name: "CVUploader-master", fileType: "zip", url: url,serverType: "app source")
                             self?.files.append(sourceCode)
                             self?.tableView.reloadData()
+                            SwiftSpinner.hide()
+
                         }
                     }
                     else{
                         sender.isEnabled = false
+                        SwiftSpinner.hide()
                     }
                 }
                 else{
-                    //is it possible?
                     sender.isEnabled = true
+                    SwiftSpinner.hide()
                 }
             })
 
@@ -70,12 +79,9 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
         performSegue(withIdentifier: "showDocs", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
     @IBAction func pushUpdateButton(_ sender: Any) {
-
+        
+        SwiftSpinner.show("Feltöltés...")
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 
@@ -85,18 +91,21 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
             }
         },
             to: Constants.DOC_URL,
-            encodingCompletion: { encodingResult in
+            encodingCompletion: {
+                [weak self]
+                encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         debugPrint(response)
+                        SwiftSpinner.hide()
+                        self?.performSegue(withIdentifier: "showDocs", sender: self)
                 }
                 case .failure(let encodingError):
                     print(encodingError)
+                    SwiftSpinner.hide()
                 }
-        }
-        )
-        
+        })
     }
     
     override func viewDidLoad() {
@@ -114,6 +123,9 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.tableView.dataSource = self
         
         addFilesToTableview()
+        uploadFilesButton.layer.cornerRadius = 10
+        uploadSourceButton.layer.cornerRadius = 10
+        logoutButton.layer.cornerRadius = 10
     }
     
     func addFilesToTableview()
@@ -143,7 +155,6 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.nameLabel.text = files[indexPath.row].name
         cell.typeLabel.text = files[indexPath.row].fileType
         
-        // Configure the cell...
         return cell
     }
     

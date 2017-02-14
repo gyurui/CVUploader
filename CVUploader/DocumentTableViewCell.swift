@@ -11,9 +11,10 @@ import UIKit
 class DocumentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var sizeLabel: UILabel!
-    @IBOutlet weak var createlabel: UILabel!
 
+    @IBOutlet weak var sizeLabel: UILabel!
+
+    @IBOutlet weak var createLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

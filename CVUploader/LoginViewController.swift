@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftSpinner
 
 class LoginViewController: UIViewController {
 
@@ -23,7 +24,9 @@ class LoginViewController: UIViewController {
         loginButton.isEnabled = false
         if ( isEmailValid() && isPasswordValid())
         {
+            SwiftSpinner.show("Bejelentkezés..")
             loginProcess{
+                 SwiftSpinner.hide()
                  self.performSegue(withIdentifier: "showUploaderController", sender: self)
             }
         }
@@ -37,6 +40,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        loginButton.layer.cornerRadius = 10
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,7 +56,6 @@ class LoginViewController: UIViewController {
     func isEmailValid() -> Bool {
         if let text : String = emailTextField.text
         {
-            // print("validate calendar: \(testStr)")
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
             let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
             return emailTest.evaluate(with: text)
@@ -140,4 +143,6 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+
 

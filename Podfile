@@ -8,4 +8,5 @@ target 'CVUploader' do
 
   # Pods for CVUploader
   pod 'Alamofire', '~> 4.3'
+  pod "SwiftSpinner"
 end

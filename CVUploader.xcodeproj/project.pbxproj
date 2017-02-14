@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33FF179EB12629E70B243178 /* Pods_CVUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC9CE1D051FA3560E91F231 /* Pods_CVUploader.framework */; };
+		8C7174C71E5347D7006EAC77 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7174C61E5347D7006EAC77 /* SubViewController.swift */; };
 		8CA5627E1E52736900187674 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5627D1E52736900187674 /* Document.swift */; };
 		8CA562841E52EF1000187674 /* trumGyorgyCv.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */; };
 		8CA562861E52F4DA00187674 /* CustomFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562851E52F4DA00187674 /* CustomFile.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		8684B31A6281F5DFD2646C0D /* Pods-CVUploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVUploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-CVUploader/Pods-CVUploader.release.xcconfig"; sourceTree = "<group>"; };
+		8C7174C61E5347D7006EAC77 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		8CA5627D1E52736900187674 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = trumGyorgyCv.pdf; sourceTree = "<group>"; };
 		8CA562851E52F4DA00187674 /* CustomFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFile.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				8CA5628D1E53127B00187674 /* DocumentsViewController.swift */,
 				8CFCA1F81E5240C100655B9C /* UploadViewController.swift */,
 				8CFCA1E61E50D44700655B9C /* LoginViewController.swift */,
+				8C7174C61E5347D7006EAC77 /* SubViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				8CFCA1E71E50D44700655B9C /* LoginViewController.swift in Sources */,
 				8CFCA1F91E5240C100655B9C /* UploadViewController.swift in Sources */,
+				8C7174C71E5347D7006EAC77 /* SubViewController.swift in Sources */,
 				8CA562861E52F4DA00187674 /* CustomFile.swift in Sources */,
 				8CA5627E1E52736900187674 /* Document.swift in Sources */,
 				8CFCA1E51E50D44700655B9C /* AppDelegate.swift in Sources */,
