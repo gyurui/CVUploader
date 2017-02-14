@@ -59,7 +59,6 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
                             self?.files.append(sourceCode)
                             self?.tableView.reloadData()
                             SwiftSpinner.hide()
-
                         }
                     }
                     else{

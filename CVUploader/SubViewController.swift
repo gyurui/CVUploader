@@ -63,8 +63,6 @@ class SubViewController: UIViewController {
             Alamofire.request(Constants.SUBMIT_URL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: httpHeader).responseJSON(completionHandler: {
                 [weak self]
                 response in
-                let result = response.result
-                //self?.loginButton.isEnabled = true
                 if let statusCode : Int = response.response?.statusCode
                 {
                     if statusCode == 200

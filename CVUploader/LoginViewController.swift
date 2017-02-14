@@ -87,10 +87,7 @@ class LoginViewController: UIViewController {
             "email": emailTextField.text as Any,
             "pswd": passwordTextField.text as Any
         ]
-//        let parameters : Parameters = [
-//            "email":"gyuri.trum@gmail.com",
-//            "pswd":"PassForBigFishChallange"
-//        ]
+
         let httpHeader : HTTPHeaders = [
             "content-Typer":"application/json"
         ]
@@ -107,9 +104,7 @@ class LoginViewController: UIViewController {
                 case 200:
                     if let dict = result.value as? Dictionary<String,AnyObject> {
                         print(dict)
-                        
                         self?.user = User.init(uuid: dict["uuid"] as! String, email: dict["email"] as! String, created: dict["created"] as! Int)
-                        
                         completed()
                     }
                     break
