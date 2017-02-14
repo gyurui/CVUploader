@@ -12,7 +12,7 @@ import SwiftSpinner
 
 class SubViewController: UIViewController {
     
-    var submitUUID = ""
+    private var submitUUID = ""
     
     @IBOutlet weak var submitButton: UIButton!
     
@@ -34,7 +34,7 @@ class SubViewController: UIViewController {
         
     }
     
-    func areYouSureAboutThis()
+    private func areYouSureAboutThis()
     {
         let refreshAlert = UIAlertController(title: "Figyelem", message: "Ha egyszer lezártad a folyamatot az nem nyitható meg újra. Biztosan lezárod a folyamatot? ", preferredStyle: UIAlertControllerStyle.alert)
         
@@ -49,7 +49,7 @@ class SubViewController: UIViewController {
         present(refreshAlert, animated: true, completion: nil)
     }
     
-    func submitApp()
+    private func submitApp()
     {
         
             let parameters : Parameters = [

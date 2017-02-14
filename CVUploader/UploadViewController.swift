@@ -127,7 +127,7 @@ class UploadViewController: UIViewController,UITableViewDelegate,UITableViewData
         logoutButton.layer.cornerRadius = 10
     }
     
-    func addFilesToTableview()
+    private func addFilesToTableview()
     {
 
         if let myCV : URL = Bundle.main.url(forResource: "trumGyorgyCv", withExtension: "pdf")

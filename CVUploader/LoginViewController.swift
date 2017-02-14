@@ -16,11 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var user : User? = nil
-    var documentsArray : [Document]? = []
+    private var user : User? = nil
+    private var documentsArray : [Document]? = []
     
     @IBAction func pushLogin(_ sender: UIButton) {
-        //sender.isEnabled = false
+        sender.isEnabled = false
         loginButton.isEnabled = false
         if ( isEmailValid() && isPasswordValid())
         {
@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
             showAlertMessage(message: "Email cím vagy jelszó nem megfelelő formátumú")
             loginButton.isEnabled = true
         }
+
     }
     
     override func viewDidLoad() {
@@ -53,7 +54,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func isEmailValid() -> Bool {
+    private func isEmailValid() -> Bool {
         if let text : String = emailTextField.text
         {
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -63,7 +64,7 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    func isPasswordValid() -> Bool
+    private func isPasswordValid() -> Bool
     {
         if let text : String = passwordTextField.text
         {
@@ -75,14 +76,14 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    func showAlertMessage(message: String)
+    private func showAlertMessage(message: String)
     {
         let alert = UIAlertController.init(title: "Hopsz", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    func loginProcess(completed: @escaping () -> ()) {
+    private func loginProcess(completed: @escaping () -> ()) {
         let parameters : Parameters = [
             "email": emailTextField.text as Any,
             "pswd": passwordTextField.text as Any
@@ -126,8 +127,6 @@ class LoginViewController: UIViewController {
             }
         })
     }
-    
-
 }
 
 extension UIViewController {

@@ -76,7 +76,6 @@ class DocumentsViewController: UIViewController, UITableViewDelegate,UITableView
         SwiftSpinner.show("Törlés folyamatban ...")
         var parameters : Array? = []
     
-            //repair!
             for doc in documents {
                 var dict : Parameters = [:]
                 dict["uuid"] = doc.uuid
