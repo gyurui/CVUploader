@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33FF179EB12629E70B243178 /* Pods_CVUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC9CE1D051FA3560E91F231 /* Pods_CVUploader.framework */; };
+		8CA5627E1E52736900187674 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5627D1E52736900187674 /* Document.swift */; };
+		8CA562841E52EF1000187674 /* trumGyorgyCv.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */; };
+		8CA562861E52F4DA00187674 /* CustomFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562851E52F4DA00187674 /* CustomFile.swift */; };
+		8CA562881E52F80D00187674 /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562871E52F80D00187674 /* FileTableViewCell.swift */; };
+		8CA5628A1E52F89B00187674 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562891E52F89B00187674 /* TableViewController.swift */; };
+		8CFCA1E51E50D44700655B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1E41E50D44700655B9C /* AppDelegate.swift */; };
+		8CFCA1E71E50D44700655B9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1E61E50D44700655B9C /* LoginViewController.swift */; };
+		8CFCA1EA1E50D44700655B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCA1E81E50D44700655B9C /* Main.storyboard */; };
+		8CFCA1EC1E50D44700655B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCA1EB1E50D44700655B9C /* Assets.xcassets */; };
+		8CFCA1EF1E50D44700655B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCA1ED1E50D44700655B9C /* LaunchScreen.storyboard */; };
+		8CFCA1F71E519B9800655B9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1F61E519B9800655B9C /* Constants.swift */; };
+		8CFCA1F91E5240C100655B9C /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1F81E5240C100655B9C /* UploadViewController.swift */; };
+		8CFCA1FB1E52432000655B9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1FA1E52432000655B9C /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8684B31A6281F5DFD2646C0D /* Pods-CVUploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVUploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-CVUploader/Pods-CVUploader.release.xcconfig"; sourceTree = "<group>"; };
+		8CA5627D1E52736900187674 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = trumGyorgyCv.pdf; sourceTree = "<group>"; };
+		8CA562851E52F4DA00187674 /* CustomFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFile.swift; sourceTree = "<group>"; };
+		8CA562871E52F80D00187674 /* FileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		8CA562891E52F89B00187674 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8CFCA1E11E50D44700655B9C /* CVUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CFCA1E41E50D44700655B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CFCA1E61E50D44700655B9C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8CFCA1E91E50D44700655B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CFCA1EB1E50D44700655B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CFCA1EE1E50D44700655B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CFCA1F01E50D44700655B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CFCA1F61E519B9800655B9C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8CFCA1F81E5240C100655B9C /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		8CFCA1FA1E52432000655B9C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BAC9CE1D051FA3560E91F231 /* Pods_CVUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E1DA67BA54DF13FF4301CD /* Pods-CVUploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVUploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CVUploader/Pods-CVUploader.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CFCA1DE1E50D44700655B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33FF179EB12629E70B243178 /* Pods_CVUploader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F51D8FB54B3AA9B4046C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAC9CE1D051FA3560E91F231 /* Pods_CVUploader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CA5627F1E5273F300187674 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CFCA1FA1E52432000655B9C /* User.swift */,
+				8CA5627D1E52736900187674 /* Document.swift */,
+				8CA562851E52F4DA00187674 /* CustomFile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8CA562801E52740400187674 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CFCA1F81E5240C100655B9C /* UploadViewController.swift */,
+				8CFCA1E61E50D44700655B9C /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8CA562811E52EEE200187674 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		8CFCA1D81E50D44700655B9C = {
+			isa = PBXGroup;
+			children = (
+				8CFCA1E31E50D44700655B9C /* CVUploader */,
+				8CFCA1E21E50D44700655B9C /* Products */,
+				E4797C3FF27A584728D4AAB4 /* Pods */,
+				10F51D8FB54B3AA9B4046C70 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CFCA1E21E50D44700655B9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CFCA1E11E50D44700655B9C /* CVUploader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CFCA1E31E50D44700655B9C /* CVUploader */ = {
+			isa = PBXGroup;
+			children = (
+				8CA562801E52740400187674 /* Controller */,
+				8CA5627F1E5273F300187674 /* Model */,
+				8CFCA1E41E50D44700655B9C /* AppDelegate.swift */,
+				8CA562871E52F80D00187674 /* FileTableViewCell.swift */,
+				8CFCA1F61E519B9800655B9C /* Constants.swift */,
+				8CFCA1E81E50D44700655B9C /* Main.storyboard */,
+				8CA562891E52F89B00187674 /* TableViewController.swift */,
+				8CFCA1EB1E50D44700655B9C /* Assets.xcassets */,
+				8CFCA1ED1E50D44700655B9C /* LaunchScreen.storyboard */,
+				8CFCA1F01E50D44700655B9C /* Info.plist */,
+				8CA562811E52EEE200187674 /* Files */,
+			);
+			path = CVUploader;
+			sourceTree = "<group>";
+		};
+		E4797C3FF27A584728D4AAB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6E1DA67BA54DF13FF4301CD /* Pods-CVUploader.debug.xcconfig */,
+				8684B31A6281F5DFD2646C0D /* Pods-CVUploader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CFCA1E01E50D44700655B9C /* CVUploader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CFCA1F31E50D44700655B9C /* Build configuration list for PBXNativeTarget "CVUploader" */;
+			buildPhases = (
+				3120D1C73798324D31865C21 /* [CP] Check Pods Manifest.lock */,
+				8CFCA1DD1E50D44700655B9C /* Sources */,
+				8CFCA1DE1E50D44700655B9C /* Frameworks */,
+				8CFCA1DF1E50D44700655B9C /* Resources */,
+				025947BEDE96DD0B07532ED5 /* [CP] Embed Pods Frameworks */,
+				4FFCF38AE6F132B8A15E4715 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CVUploader;
+			productName = CVUploader;
+			productReference = 8CFCA1E11E50D44700655B9C /* CVUploader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CFCA1D91E50D44700655B9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Trum Gyorgy";
+				TargetAttributes = {
+					8CFCA1E01E50D44700655B9C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T3N6Q5M62M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8CFCA1DC1E50D44700655B9C /* Build configuration list for PBXProject "CVUploader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CFCA1D81E50D44700655B9C;
+			productRefGroup = 8CFCA1E21E50D44700655B9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CFCA1E01E50D44700655B9C /* CVUploader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CFCA1DF1E50D44700655B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CFCA1EF1E50D44700655B9C /* LaunchScreen.storyboard in Resources */,
+				8CFCA1EC1E50D44700655B9C /* Assets.xcassets in Resources */,
+				8CA562841E52EF1000187674 /* trumGyorgyCv.pdf in Resources */,
+				8CFCA1EA1E50D44700655B9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		025947BEDE96DD0B07532ED5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CVUploader/Pods-CVUploader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3120D1C73798324D31865C21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FFCF38AE6F132B8A15E4715 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CVUploader/Pods-CVUploader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CFCA1DD1E50D44700655B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CFCA1E71E50D44700655B9C /* LoginViewController.swift in Sources */,
+				8CFCA1F91E5240C100655B9C /* UploadViewController.swift in Sources */,
+				8CA562861E52F4DA00187674 /* CustomFile.swift in Sources */,
+				8CA5627E1E52736900187674 /* Document.swift in Sources */,
+				8CFCA1E51E50D44700655B9C /* AppDelegate.swift in Sources */,
+				8CA562881E52F80D00187674 /* FileTableViewCell.swift in Sources */,
+				8CFCA1FB1E52432000655B9C /* User.swift in Sources */,
+				8CA5628A1E52F89B00187674 /* TableViewController.swift in Sources */,
+				8CFCA1F71E519B9800655B9C /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8CFCA1E81E50D44700655B9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CFCA1E91E50D44700655B9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8CFCA1ED1E50D44700655B9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CFCA1EE1E50D44700655B9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CFCA1F11E50D44700655B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CFCA1F21E50D44700655B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CFCA1F41E50D44700655B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6E1DA67BA54DF13FF4301CD /* Pods-CVUploader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T3N6Q5M62M;
+				INFOPLIST_FILE = CVUploader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trum.CVUploader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8CFCA1F51E50D44700655B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8684B31A6281F5DFD2646C0D /* Pods-CVUploader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T3N6Q5M62M;
+				INFOPLIST_FILE = CVUploader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trum.CVUploader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CFCA1DC1E50D44700655B9C /* Build configuration list for PBXProject "CVUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CFCA1F11E50D44700655B9C /* Debug */,
+				8CFCA1F21E50D44700655B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CFCA1F31E50D44700655B9C /* Build configuration list for PBXNativeTarget "CVUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CFCA1F41E50D44700655B9C /* Debug */,
+				8CFCA1F51E50D44700655B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CFCA1D91E50D44700655B9C /* Project object */;
+}
