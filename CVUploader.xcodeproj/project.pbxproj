@@ -12,7 +12,9 @@
 		8CA562841E52EF1000187674 /* trumGyorgyCv.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */; };
 		8CA562861E52F4DA00187674 /* CustomFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562851E52F4DA00187674 /* CustomFile.swift */; };
 		8CA562881E52F80D00187674 /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562871E52F80D00187674 /* FileTableViewCell.swift */; };
-		8CA5628A1E52F89B00187674 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA562891E52F89B00187674 /* TableViewController.swift */; };
+		8CA5628C1E5301BD00187674 /* gyuri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CA5628B1E5301BD00187674 /* gyuri.jpg */; };
+		8CA5628E1E53127B00187674 /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5628D1E53127B00187674 /* DocumentsViewController.swift */; };
+		8CA562901E53186000187674 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5628F1E53185F00187674 /* DocumentTableViewCell.swift */; };
 		8CFCA1E51E50D44700655B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1E41E50D44700655B9C /* AppDelegate.swift */; };
 		8CFCA1E71E50D44700655B9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCA1E61E50D44700655B9C /* LoginViewController.swift */; };
 		8CFCA1EA1E50D44700655B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCA1E81E50D44700655B9C /* Main.storyboard */; };
@@ -29,7 +31,9 @@
 		8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = trumGyorgyCv.pdf; sourceTree = "<group>"; };
 		8CA562851E52F4DA00187674 /* CustomFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFile.swift; sourceTree = "<group>"; };
 		8CA562871E52F80D00187674 /* FileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
-		8CA562891E52F89B00187674 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8CA5628B1E5301BD00187674 /* gyuri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gyuri.jpg; sourceTree = "<group>"; };
+		8CA5628D1E53127B00187674 /* DocumentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
+		8CA5628F1E53185F00187674 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
 		8CFCA1E11E50D44700655B9C /* CVUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFCA1E41E50D44700655B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CFCA1E61E50D44700655B9C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		8CA562801E52740400187674 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8CA5628D1E53127B00187674 /* DocumentsViewController.swift */,
 				8CFCA1F81E5240C100655B9C /* UploadViewController.swift */,
 				8CFCA1E61E50D44700655B9C /* LoginViewController.swift */,
 			);
@@ -86,6 +91,7 @@
 		8CA562811E52EEE200187674 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CA5628B1E5301BD00187674 /* gyuri.jpg */,
 				8CA562831E52EF1000187674 /* trumGyorgyCv.pdf */,
 			);
 			name = Files;
@@ -116,9 +122,9 @@
 				8CA5627F1E5273F300187674 /* Model */,
 				8CFCA1E41E50D44700655B9C /* AppDelegate.swift */,
 				8CA562871E52F80D00187674 /* FileTableViewCell.swift */,
+				8CA5628F1E53185F00187674 /* DocumentTableViewCell.swift */,
 				8CFCA1F61E519B9800655B9C /* Constants.swift */,
 				8CFCA1E81E50D44700655B9C /* Main.storyboard */,
-				8CA562891E52F89B00187674 /* TableViewController.swift */,
 				8CFCA1EB1E50D44700655B9C /* Assets.xcassets */,
 				8CFCA1ED1E50D44700655B9C /* LaunchScreen.storyboard */,
 				8CFCA1F01E50D44700655B9C /* Info.plist */,
@@ -201,6 +207,7 @@
 			files = (
 				8CFCA1EF1E50D44700655B9C /* LaunchScreen.storyboard in Resources */,
 				8CFCA1EC1E50D44700655B9C /* Assets.xcassets in Resources */,
+				8CA5628C1E5301BD00187674 /* gyuri.jpg in Resources */,
 				8CA562841E52EF1000187674 /* trumGyorgyCv.pdf in Resources */,
 				8CFCA1EA1E50D44700655B9C /* Main.storyboard in Resources */,
 			);
@@ -266,9 +273,10 @@
 				8CA562861E52F4DA00187674 /* CustomFile.swift in Sources */,
 				8CA5627E1E52736900187674 /* Document.swift in Sources */,
 				8CFCA1E51E50D44700655B9C /* AppDelegate.swift in Sources */,
+				8CA5628E1E53127B00187674 /* DocumentsViewController.swift in Sources */,
+				8CA562901E53186000187674 /* DocumentTableViewCell.swift in Sources */,
 				8CA562881E52F80D00187674 /* FileTableViewCell.swift in Sources */,
 				8CFCA1FB1E52432000655B9C /* User.swift in Sources */,
-				8CA5628A1E52F89B00187674 /* TableViewController.swift in Sources */,
 				8CFCA1F71E519B9800655B9C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

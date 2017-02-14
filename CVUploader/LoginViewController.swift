@@ -24,9 +24,7 @@ class LoginViewController: UIViewController {
         if ( isEmailValid() && isPasswordValid())
         {
             loginProcess{
-            self.downloadDocumentList {
-                    self.performSegue(withIdentifier: "showUploaderController", sender: self)
-                }
+                 self.performSegue(withIdentifier: "showUploaderController", sender: self)
             }
         }
         else
@@ -129,16 +127,7 @@ class LoginViewController: UIViewController {
         })
     }
     
-    func downloadDocumentList(completed: @escaping () -> ()){
-        Alamofire.request(Constants.USER_ACCOUNT_URL).responseJSON(completionHandler: {
-            response in
-            let result = response.result
-            if let dict = result.value as? Dictionary<String,AnyObject> {
-                
-            }
-            completed()
-        })
-    }
+
 }
 
 extension UIViewController {
