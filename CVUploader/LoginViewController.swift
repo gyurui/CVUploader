@@ -99,6 +99,8 @@ class LoginViewController: UIViewController {
             self?.loginButton.isEnabled = true
             if let statusCode : Int = response.response?.statusCode
             {
+                SwiftSpinner.hide()
+
                 switch(statusCode)
                 {
                 case 200:
